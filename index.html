@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+
+<a-scene embedded arjs>
+
+  <!-- Marker (you can replace this later with custom QR/image marker) -->
+  <a-marker preset="hiro">
+
+    <!-- Invisible plane (just for positioning) -->
+    <a-plane position="0 0 0" rotation="-90 0 0" width="1" height="1" color="transparent"></a-plane>
+
+    <!-- Audio -->
+    <a-entity
+      sound="src: audio.mp3; autoplay: true"
+      position="0 0.5 0">
+    </a-entity>
+
+  </a-marker>
+
+  <!-- Camera -->
+  <a-entity camera></a-entity>
+
+</a-scene>
+
+</body>
+</html>
